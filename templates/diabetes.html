@@ -1,0 +1,59 @@
+
+
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+ 
+            <div class="card card-body"  style="background-image: url(https://wallpaperaccess.com/full/3701999.jpg); background-repeat: no-repeat; background-attachment:fixed; background-size:100% ;">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                
+                <br>
+                <br>
+                <center><h1 style="color: white;"><b>Diabetes Predictor</b></h1></center>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label><b>Number of Pregnancies(0 to 17)</b></label><br>
+                        <input  class="form-control" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Glucose(70 to 100 mg/dL)</b></label><br>
+                        <input  class="form-control" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Blood Pressure(120/80 mm Hg)</b></label><br>
+                        <input  class="form-control" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Skin Thickness(10 to 30 mm)</b></label><br>
+                        <input  class="form-control" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20">
+                    </div>
+            		<div class="form-group"> 
+                        <label><b>Insulin Level(5 to 20 mU/L)</b></label><br>
+                        <input  class="form-control" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 20">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Body Mass Index(18.5 to 24.9 kg/m^2)</b></label><br>
+                        <input  class="form-control" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Diabetes Pedigree Function(0.078 to 2.42)</b></label><br>
+                        <input  class="form-control" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52">
+                    </div>
+            		<div class="form-group">
+                        <label><b>Age</b></label><br>
+                        <input  class="form-control" type="text" name="age" placeholder="Age (years) eg. 34">
+                    </div>
+                </div>
+            </div>
+            		<input type="submit" class="btn btn-info btn-block" value="Predict">
+                </form>
+        </div>
+            </div>
+        </div>
+        <div class="col-md-"></div>
+    </div>
+{% endblock %}

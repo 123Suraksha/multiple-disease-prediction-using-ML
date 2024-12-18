@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row"  style="margin-bottom: 175px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-12">
+        <center><h1>Liver Disease Predictor</h1></center>
+        <div class="card card-body" style="background-image: url(https://static.vecteezy.com/system/resources/thumbnails/021/922/499/original/bad-liver-disease-symptoms-liver-failure-3d-anatomy-x-ray-ultrasound-free-video.jpg); background-repeat: no-repeat;background-attachment:fixed; background-size:100% ;" >
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Age</b></label><br>
+                            <input class="form-control" type="text" name="Age" placeholder="Age">
+                        </div>
+                
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Total Bilirubin(0.3 to 1.0 mg/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="Total_Bilirubin" placeholder="Total Bilirubin">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Direct Bilirubin(0.1 to 0.3 mg/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="Direct_Bilirubin" placeholder="Direct Bilirubin">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Alkaline Phosphotase(44 to 147 IU/L)</b></label><br>
+                            <input  class="form-control" type="text" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase">
+                        </div>
+                  
+                
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Alamine Aminotransferase(7 to 56 IU/L)</b></label><br>
+                            <input  class="form-control" type="text" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase">
+                        </div>
+                  
+                    
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Aspartate Aminotransferase(10 to 40 IU/L)</b></label><br>
+                            <input  class="form-control" type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase">
+                        </div>
+                   
+                
+                
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Total Protiens(6 to 8.3 g/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="Total_Protiens" placeholder="Total Protiens">
+                        </div>
+                  
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Albumin(3.5 to 5.0 g/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="Albumin" placeholder="Albumin">
+                        </div>
+                    
+                
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Albumin and Globulin Ratio(0.6 to 1.5)</b></label><br>
+                            <input  class="form-control" type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio">
+                        </div>
+                   
+                    
+                        <div class="form-group">
+                            <label style="color: rgb(243, 230, 230);"><b>Gender</b></label><br>
+                            <input  class="form-control" type="text" name="Gender_Male" placeholder="Gender(Male: 1, Female: 0)">
+                        </div>
+                    
+                </div>
+                <input type="submit" class="btn btn-info btn-block" value="Predict">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+{% endblock %}

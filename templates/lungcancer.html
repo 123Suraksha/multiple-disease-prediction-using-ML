@@ -1,0 +1,101 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="row" style="margin-bottom: 175px;">
+    <div class="col-md-2"></div>
+    <div class="col-md-12">
+        <center><h1>Lung Cancer Predictor</h1></center>
+        <div class="card card-body" style="background-image: url( https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_756141_16919757324217839.jpg); background-repeat: no-repeat;background-attachment:fixed; background-size:100% ;" >
+            <form class="form-horizontal" action="{{ url_for('lung') }}" method="POST">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            
+            <!-- Add a label for the form title -->
+			<label for="form_title" class="sr-only">Health Assessment Form</label>
+			<input type="hidden" name="form_title" id="form_title" value="Health Assessment Form">
+</div>
+                        <div class="form-group"><label for="age" style="color: rgb(243, 230, 230);"><b>Age:</b></label>
+			<input class="form-control" type="number" name="age" id="age" min="0" max="100" required value="30">
+</div>
+                        <div class="form-group">			<label for="gender" style="color: rgb(243, 230, 230);"><b>Gender:</b></label>
+			<select  class="form-control" name="gender" id="gender" required>
+				<option value="" disabled>Select gender</option>
+				<option value="male" selected>Male</option>
+				<option value="female">Female</option>
+			</select>
+</div>                        <div class="form-group">
+			<p style="color: rgb(243, 230, 230);"><b>On a scale from 1 (highest) to 9 (lowest), update the following:</b></p>
+
+			<label for="air_pollution" style="color: rgb(243, 230, 230);"><b>Air Pollution:</b></label>
+			<input class="form-control" type="number" name="air_pollution" id="air_pollution" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="alcohol_use" style="color: rgb(243, 230, 230);"><b>Alcohol use:</b></label>
+			<input type="number" name="alcohol_use" id="alcohol_use" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="dust_allergy" style="color: rgb(243, 230, 230);"><b>Dust Allergy:</b></label>
+			<input type="number" name="dust_allergy" id="dust_allergy" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="occupational_hazards" style="color: rgb(243, 230, 230);"><b>Occupational Hazards:</b></label>
+			<input type="number" name="occupational_hazards" id="occupational_hazards" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="genetic_risk" style="color: rgb(243, 230, 230);"><b>Genetic Risk:</b></label>
+			<input type="number" name="genetic_risk" id="genetic_risk" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="chronic_lung_disease" style="color: rgb(243, 230, 230);"><b>Chronic Lung Disease:</b></label>
+			<input type="number" name="chronic_lung_disease" id="chronic_lung_disease" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="balanced_diet" style="color: rgb(243, 230, 230);"><b>Balanced Diet:</b></label>
+			<input type="number" name="balanced_diet" id="balanced_diet" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="obesity" style="color: rgb(243, 230, 230);"><b>Obesity:</b></label>
+			<input type="number" name="obesity" id="obesity" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="smoking" style="color: rgb(243, 230, 230);"><b>Smoking:</b></label>
+			<input type="number" name="smoking" id="smoking" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="passive_smoker" style="color: rgb(243, 230, 230);"><b>Passive Smoker:</b></label>
+			<input type="number" name="passive_smoker" id="passive_smoker" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="chest_pain" style="color: rgb(243, 230, 230);"><b>Chest Pain:</b></label>
+			<input type="number" name="chest_pain" id="chest_pain" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="coughing_blood" style="color: rgb(243, 230, 230);"><b>Clogging of Blood:</b></label>
+			<input type="number" name="coughing_blood" id="coughing_blood" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="fatigue" style="color: rgb(243, 230, 230);"><b>Fatigue:</b></label>
+			<input type="number" name="fatigue" id="fatigue" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="weight_loss" style="color: rgb(243, 230, 230);"><b>Weight Loss:</b></label>
+			<input type="number" name="weight_loss" id="weight_loss" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="shortness_of_breath" style="color: rgb(243, 230, 230);"><b>Shortness of Breath:</b></label>
+			<input type="number" name="shortness_of_breath" id="shortness_of_breath" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="wheezing" style="color: rgb(243, 230, 230);"><b>Wheezing:</b></label>
+			<input type="number" name="wheezing" id="wheezing" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="swallowing_difficulty" style="color: rgb(243, 230, 230);"><b>Swallowing Difficulty:</b></label>
+			<input type="number" name="swallowing_difficulty" id="swallowing_difficulty" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="clubbing" style="color: rgb(243, 230, 230);"><b>Clubbing of Finger Nails:</b></label>
+			<input type="number" name="clubbing" id="clubbing" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="frequent_cold" style="color: rgb(243, 230, 230);"><b>Frequent Cold:</b></label>
+			<input type="number" name="frequent_cold" id="frequent_cold" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="dry_cough" style="color: rgb(243, 230, 230);"><b>Dry Cough:</b></label>
+			<input type="number" name="dry_cough" id="dry_cough" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<label for="snoring" style="color: rgb(243, 230, 230);"><b>Snoring:</b></label>
+			<input type="number" name="snoring" id="snoring" min="1" max="9" required value="1">
+</div>                        <div class="form-group">
+			<input type="submit" value="Submit">
+</div>
+		</form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+{% endblock %}

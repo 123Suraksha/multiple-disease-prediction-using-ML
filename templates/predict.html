@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-12">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger"><center><b style="color:black"><i>Sorry! Your health condition is at risk.Please consult  nearby DOCTOR.</i></b></center>
+                    <br>   
+                <iframe src="{{ doct }}" width="1200" height="850" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				
+				</div>
+            {% else %}
+                <div class="card card-body alert alert-success"><center>Great! You are HEALTHY.</center></div>
+            {% endif %}
+			
+						           <div class="row">
+			
+
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

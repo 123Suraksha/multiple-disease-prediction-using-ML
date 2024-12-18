@@ -1,0 +1,127 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+        
+        <div class="card card-body" style="background-image: url(https://thumbs.dreamstime.com/z/kidney-illness-treatment-organ-pills-white-background-top-view-kidney-illness-treatment-organ-pills-white-161840849.jpg); background-repeat: no-repeat;background-attachment:fixed; background-size:100% ;" >
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                <br>
+                <br>
+                <center><h1 style="color:black"><b>Kidney Disease Predictor</b></h1></center>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label style="color: black;"><b>Age</b></label><br>
+                            <input  class="form-control" type="text" name="age" placeholder="age">
+                        </div>
+                   
+                        <div class="form-group">
+                            <label style="color: black"><b>Blood Pressure(120/80 mmHg)</b></label><br>
+                            <input  class="form-control" type="text" name="bp" placeholder="bp">
+                        </div>
+                  
+                    
+                        <div class="form-group">
+                            <label style="color: black"><b>Albumin(0 to 1.02 mg/g)</b></label><br>
+                            <input  class="form-control" type="text" name="al" placeholder="al">
+                        </div>
+                 
+                
+                        <div class="form-group">
+                            <label style="color: black"><b>Sugar(0 to 4 mg/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="su" placeholder="su">
+                        </div>
+                   
+                   
+                        <div class="form-group">
+                            <label style="color:black"><b>Red Blood Cells(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="rbc" placeholder="rbc">
+                        </div>
+                    
+                  
+                        <div class="form-group">
+                            <label style="color:black"><b>Pus Cells(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="pc" placeholder="pc">
+                        </div>
+                 
+                
+                        <div class="form-group">
+                            <label style="color: black"><b>Pcc(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="pcc" placeholder="pcc">
+                        </div>
+                
+                  
+                        <div class="form-group">
+                            <label style="color:black"><b>Bacteria(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="ba" placeholder="ba">
+                        </div>
+                 
+                  
+                        <div class="form-group">
+                            <label style="color:black"><b>Blood Glucose Random(117 to 140 mg/g)</b></label><br>
+                            <input  class="form-control" type="text" name="bgr" placeholder="bgr">
+                        </div>
+                 
+     
+                        <div class="form-group">
+                            <label style="color:black"><b>Blood urea(10 to 56 mg/dL)</b></label><br>
+                            <input  class="form-control" type="text" name="bu" placeholder="bu">
+                        </div>
+                 
+               
+                        <div class="form-group">
+                            <label style="color: black"><b>Serum Creatinine(1.2 to 9 mg/dL)</b></label><br>
+                            <input class="form-control" type="text" name="sc" placeholder="sc">
+                        </div>
+                    
+                   
+                        <div class="form-group">
+                            <label style="color:black"><b>Pot(2.5 to 5 mmol/L)</b></label><br>
+                            <input  class="form-control" type="text" name="pot" placeholder="pot">
+                        </div>
+                   
+            
+                        <div class="form-group">
+                            <label style="color: black"><b>White Cells Count(4500 to 11000)</b></label><br>
+                            <input  class="form-control" type="text" name="wc" placeholder="wc">
+                        </div>
+                  
+                
+                        <div class="form-group">
+                            <label style="color: black"><b>Hypertension(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="htn" placeholder="htn">
+                        </div>
+                    
+                 
+                        <div class="form-group">
+                            <label style="color: black"><b>Diabetes Mellitus(0 or 1)</b></label><br>
+                            <input class="form-control" type="text" name="dm" placeholder="dm">
+                        </div>
+                   
+             
+                        <div class="form-group">
+                            <label style="color:black"><b>Coronary Artery Disease(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="cad" placeholder="cad">
+                        </div>
+                 
+                   
+                        <div class="form-group">
+                            <label style="color: black"><b>Pedal Edema(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="pe" placeholder="pe">
+                        </div>
+                    
+                    
+                        <div class="form-group">
+                            <label style="color: black"><b>Anemia(0 or 1)</b></label><br>
+                            <input  class="form-control" type="text" name="ane" placeholder="ane">
+                        </div>
+                    
+                </div>
+                <input type="submit" class="btn btn-info btn-block" value="Predict">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+{% endblock %}
